@@ -40,6 +40,8 @@ It uses a stack data structure or recursion to keep track of the vertices to be 
 ### BFS - Breadth-First Search 
 ![images](images/bfs.png)
 Breadth-First Search (BFS) is a graph traversal algorithm that explores all the vertices of a graph in breadth-first order, i.e., it visits all the vertices at the same level before moving to the vertices at the next level. BFS starts from a specified source vertex and explores its neighbors first before moving to their neighbors.
+
+>Here the traversal starts from "S" and then it traverses visits all the neighboring vertices - "A", "B" and "C". Then it moves to the next vertices.
 ```python
 from collections import deque
 def bfs(graph, start, search_value):
@@ -102,8 +104,13 @@ print(f"element {search_value} : {res}")
 
 1. Finally, the result is printed, indicating whether the search_value was found in the graph or not.
 
+<hr>
+
 ### DFS - Depth-First Search
 ![images](images/dfs.png)
+
+>Here the traversal starts from "S", then it moves to "A" , from "A" to "D" and finally it reaches the bottom "D". Then it backtraces from the bottom and visits all the neighboring vertices  and moves towards the root.
+
 ```python
 def dfs(graph, start, search_value, visited = None):
     if visited is None:
